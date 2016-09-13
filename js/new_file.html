@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">;
+		<title></title>
+		<script src="jquery-1.11.1.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			li{float:left;list-style: none;}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oLi=document.getElementsByTagName("li")[0];
+				var ih=getStyle(oLi,"width");
+				var i=oLi.offsetWidth;
+				var is=oLi.clientWidth;
+				var ij=$("li").eq(1).width();
+				console.log(i);
+				console.log(ih);
+				console.log(is);
+				console.log(ij);
+				
+				
+				
+				function getStyle(obj,attr){
+					if(obj.currentStyle){
+						return obj.currentStyle[attr];
+					}
+					else{
+						return getComputedStyle(obj)[attr];
+					}
+				}
+			}
+
+		</script>
+	</head>
+	<body>
+		<div id="div1" style="position: relative;">
+			<div id="div2" >
+				<ul style="position: absolute;">
+					<li >sdfaaaaaaaaaaaaaaaaaaaaaa</a>
+					</li>
+			        <li ><a href=""><img src="../images/cx.jpg"/></a>
+					</li>
+										<li >sdfaaaaaaaaaaaaaaaaaaaaaa</a>
+					</li>
+			        <li ><a href=""><img src="../images/cx.jpg"/></a>
+					</li>
+			    </ul>
+			</div>
+
+		</div>
+
+	</body>
+</html>
